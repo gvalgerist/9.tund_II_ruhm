@@ -158,7 +158,7 @@
 		
 		//echo $serverUsername;
 		
-		signUp(cleanInput($signupemail), cleanInput($password), cleanInput($signupGender), cleanInput($signupAge), cleanInput($signupCountry), cleanInput($signupCity), cleanInput($signupShoesize));
+		$User->signUp($Helper->cleanInput($signupemail), $Helper->cleanInput($password), $Helper->cleanInput($signupGender), $Helper->cleanInput($signupAge), $Helper->cleanInput($signupCountry), $Helper->cleanInput($signupCity), $Helper->cleanInput($signupShoesize));
 		
 	}
 	
@@ -167,7 +167,7 @@
 		!empty($_POST["loginemail"]) && !empty($_POST["loginpassword"])
 		) {
 		
-		$error = login (cleanInput($_POST["loginemail"]), cleanInput($_POST["loginpassword"]));
+		$error = $User->login ($Helper->cleanInput($_POST["loginemail"]), $Helper->cleanInput($_POST["loginpassword"]));
 		
 		
 	}

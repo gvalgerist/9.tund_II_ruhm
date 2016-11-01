@@ -9,7 +9,7 @@
 	//kas kasutaja uuendab andmeid
 	if(isset($_POST["update"])){
 		
-		updatesneaker(cleanInput($_POST["contactemail"]), cleanInput($_POST["description"]), cleanInput($_POST["price"]));
+		updatesneaker($Helper->cleanInput($_POST["contactemail"]), $Helper->cleanInput($_POST["description"]), $Helper->cleanInput($_POST["price"]));
 		
 		header("Location: edit.php?contactemail=".$_POST["contactemail"]."&success=true");
         exit();	

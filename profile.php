@@ -18,20 +18,20 @@
 	//parooli vahetus
 	//kui unustad parooli
 	
-	$sneakerdata=getallusersneakers();
+	$sneakerdata=$Sneakers->getallusersneakers();
 	
 	
 ?>
 
 <h1>Your Profile</h1><h2><a href="data.php">Back</a></h2>
 <h2>	
-	Email: <?php profileEmail(); ?><br>
-	Gender: <?php profileGender(); ?><br>
-	Age: <?php profileAge(); ?><br>
-	Country: <?php profileCountry(); ?><br>
-	City: <?php profileCity(); ?><br>
-	Shoe Size: <?php profileShoesize(); ?><br>
-	Created: <?php profileCreated(); ?>
+	Email: <?php $ProfileInfo->profileEmail(); ?><br>
+	Gender: <?php $ProfileInfo->profileGender(); ?><br>
+	Age: <?php $ProfileInfo->profileAge(); ?><br>
+	Country: <?php $ProfileInfo->profileCountry(); ?><br>
+	City: <?php $ProfileInfo->profileCity(); ?><br>
+	Shoe Size: <?php $ProfileInfo->profileShoesize(); ?><br>
+	Created: <?php $ProfileInfo->profileCreated(); ?>
 </h2>
 
 <h1>Your Market</h1>

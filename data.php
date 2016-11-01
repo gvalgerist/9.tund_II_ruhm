@@ -26,12 +26,12 @@
 		!empty($_POST["contactemail"]) && !empty($_POST["description"]) && !empty($_POST["price"])
 		) {
 		
-		savesneaker(cleanInput($_POST["contactemail"]), cleanInput($_POST["description"]), cleanInput($_POST["price"]));
+		$Sneakers->savesneaker($Helper->cleanInput($_POST["contactemail"]), $Helper->cleanInput($_POST["description"]), $Helper->cleanInput($_POST["price"]));
 		
 		
 	}
 	
-	$sneakerdata=getallsneakers();
+	$sneakerdata=$Sneakers->getallsneakers();
 ?>
 
 <h1>
