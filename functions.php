@@ -1,25 +1,25 @@
 <?php
 	
-	require("../../config.php");
+	require("/home/georvalg/config.php");
 	
 	$database="if16_georg";
 	$mysqli=new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	
 	session_start();
 	
-	require("user.class.php");
+	require("../class/user.class.php");
 	$User=new User($mysqli);
 	
-	require("interest.class.php");
+	require("../class/interest.class.php");
 	$Interest=new Interest($mysqli);
 	
-	require("sneakers.class.php");
+	require("../class/sneakers.class.php");
 	$Sneakers=new Sneakers($mysqli);
 	
-	require("profileinfo.class.php");
+	require("../class/profileinfo.class.php");
 	$ProfileInfo=new ProfileInfo($mysqli);
 	
-	require("helper.class.php");
+	require("../class/helper.class.php");
 	$Helper=new Helper($mysqli);
 		
 ?>
